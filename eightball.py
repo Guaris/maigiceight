@@ -45,9 +45,9 @@ class Window(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        self.hi_there = tk.Button(self)
-        self.hi_there["text"] = self.eightball.readfuture()
-        self.hi_there.pack(side="top")
+        self.button = tk.Button(self)
+        self.button["text"] = self.eightball.readfuture()
+        self.button.pack(side="top")
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
         self.quit.pack(side="bottom")
