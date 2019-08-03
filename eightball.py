@@ -1,6 +1,7 @@
 import random
 import tkinter as tk
 
+
 class Magic8:
     def __init__(self):
         self.answers = [
@@ -26,12 +27,11 @@ class Magic8:
             "Very Doubtful"
         ]
 
-
     def readfuture(self):
-        choice = random.randint(1,20)
+        choice = random.randint(1, 20)
         return (self.answers[choice])
 
-    def askquestion(self,S):
+    def askquestion(self, S):
         print('The Eightball Says:{}'.format(self.readfuture()))
 
 
@@ -53,10 +53,6 @@ class Window(tk.Frame):
         self.quit.pack(side="bottom")
 
 
-
-
-
 root = tk.Tk()
-app = Window(Magic8(),master=root)
+app = Window(Magic8(), master=root)
 app.mainloop()
-
